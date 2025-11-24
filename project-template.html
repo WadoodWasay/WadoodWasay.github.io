@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title - Wadood Wasay</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Wadood Wasay</a>
+            <ul class="nav-links">
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="https://github.com/wadoodwasay" target="_blank">GitHub</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">☀️</span>
+                        <span class="theme-text">Dark</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-detail">
+            <a href="index.html#projects" class="back-link">
+                ← Back to Projects
+            </a>
+
+            <div class="project-header">
+                <h1>Your Project Title</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Academic / Hobby</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Your Role</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">Duration</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Technologies</span>
+                        <span class="meta-value">Tech Stack</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Year</span>
+                        <span class="meta-value">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-hero-image">
+                [Project Hero Image Placeholder]
+            </div>
+
+            <div class="project-body">
+                <h2>Overview</h2>
+                <p>
+                    Write a compelling overview of your project here. Explain what the project is about,
+                    what problem it solves, and why it matters. This is your chance to hook the reader
+                    and make them want to learn more.
+                </p>
+
+                <h2>The Challenge</h2>
+                <p>
+                    Describe the problem or challenge you were trying to solve with this project.
+                    What gap did you identify? What motivated you to work on this?
+                </p>
+
+                <h2>The Solution</h2>
+                <p>
+                    Explain your approach to solving the problem. What was your methodology?
+                    What key features did you implement?
+                </p>
+                <ul>
+                    <li>Key feature or achievement #1</li>
+                    <li>Key feature or achievement #2</li>
+                    <li>Key feature or achievement #3</li>
+                    <li>Key feature or achievement #4</li>
+                </ul>
+
+                <h2>Technical Implementation</h2>
+                <p>
+                    Dive into the technical details. What technologies did you use and why?
+                    What were the key technical challenges and how did you overcome them?
+                    This section can include code snippets, architecture diagrams, or other
+                    technical details.
+                </p>
+
+                <h2>Results & Impact</h2>
+                <p>
+                    Share the outcomes of your project. What did you achieve? What was the impact?
+                    Include any metrics, user feedback, or other evidence of success.
+                </p>
+
+                <h2>Key Learnings</h2>
+                <p>
+                    Reflect on what you learned from this project. What would you do differently
+                    next time? What skills did you develop?
+                </p>
+
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://github.com/wadoodwasay/your-repo" target="_blank" class="btn">
+                        View on GitHub
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const themeText = document.querySelector('.theme-text');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeButton(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        });
+
+        function updateThemeButton(theme) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Light';
+            } else {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Dark';
+            }
+        }
+    </script>
+</body>
+</html>

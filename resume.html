@@ -4,128 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Wadood Wasay</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-bg: #fafaf8;
-            --color-text: #1a1a1a;
-            --color-accent: #d94a3d;
-            --color-secondary: #2d5f5d;
-            --color-border: #e0dfd8;
-            --font-display: 'Crimson Pro', serif;
-            --font-body: 'Work Sans', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(250, 250, 248, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--color-border);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-text);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--color-accent);
-        }
-
-        main {
-            margin-top: 100px;
-            padding: 4rem 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h1 {
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-        }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            background: var(--color-accent);
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background: var(--color-secondary);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            main {
-                margin-top: 140px;
-                padding: 2rem 1.5rem;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -137,18 +19,243 @@
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="https://github.com/wadoodwasay" target="_blank">GitHub</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">☀️</span>
+                        <span class="theme-text">Dark</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <h1>Resume</h1>
-        <p>Download my resume to learn more about my experience and qualifications.</p>
-        <a href="files/resume.pdf" class="download-btn">Download Resume (PDF)</a>
-        
-        <p style="margin-top: 3rem; color: #666;">
-            <em>Note: Upload your resume PDF to a 'files' folder and update the link above.</em>
-        </p>
+        <div class="document-container">
+            <div class="document-header">
+                <h1>Resume</h1>
+                <p class="document-subtitle">Wadood Wasay</p>
+            </div>
+
+            <!-- Instructions for Google Docs Embed -->
+            <div class="embed-notice">
+                <strong>To embed your Google Doc:</strong><br>
+                1. Open your resume in Google Docs<br>
+                2. Click File → Share → Publish to web<br>
+                3. Choose "Embed" tab and copy the iframe code<br>
+                4. Replace the iframe src URL below with your document's embed URL<br>
+                5. Or uncomment the section below and paste your entire iframe code
+            </div>
+
+            <!-- Google Docs Embed (Uncomment and add your embed URL) -->
+            <!--
+            <div class="document-embed">
+                <iframe src="YOUR_GOOGLE_DOCS_EMBED_URL_HERE"></iframe>
+            </div>
+            -->
+
+            <!-- Fallback: Display content directly -->
+            <div class="document-content">
+                <!-- Contact Information -->
+                <div class="document-section">
+                    <h2>Contact Information</h2>
+                    <p>
+                        <strong>Wadood Wasay</strong><br>
+                        Phone: +1 240-449-7846<br>
+                        Email: wadoodwasay2008@gmail.com<br>
+                        GitHub: github.com/wadoodwasay
+                    </p>
+                </div>
+
+                <!-- Education -->
+                <div class="document-section">
+                    <h2>Education</h2>
+                    
+                    <div class="document-item">
+                        <h3>High School Diploma</h3>
+                        <p class="document-meta">SMCS - Magnet, Poolesville High School | 2021-2026</p>
+                    </div>
+                </div>
+
+                <!-- Relevant Coursework -->
+                <div class="document-section">
+                    <h2>Relevant Coursework</h2>
+                    
+                    <div class="document-item">
+                        <h3>Foundations of Computer Science and Technology</h3>
+                        <ul>
+                            <li>Learned engineering principles via lego rover design</li>
+                            <li>Learned scratch coding and basic java</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Research & Engineering</h3>
+                        <ul>
+                            <li>Learned principles of computer aided design</li>
+                            <li>Introduced to breadboards, protoboards, soldering, and basic electronic components</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Fundamentals of Computer Science</h3>
+                        <ul>
+                            <li>Proficiency in postfix, and prefix</li>
+                            <li>Learned about logic gates, race conditions, flip flops, transistors, resistors, basic circuits, and components of basic circuits</li>
+                            <li>Learned basics of the Racket programming language</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Algorithm Data</h3>
+                        <ul>
+                            <li>Became proficient in java</li>
+                            <li>Learned about different sorting algorithms</li>
+                            <li>Became proficient in object oriented design languages and thinking like a programmer</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Analysis of Algorithms</h3>
+                        <ul>
+                            <li>Became proficient in data structures such as stacks, queues, trees, red-black trees, and sorting algorithms</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Intro to Networking</h3>
+                        <ul>
+                            <li>Learned about networking protocols and their interworking layer by layer</li>
+                            <li>Hands on experience with networking equipment</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Guided Research B</h3>
+                        <ul>
+                            <li>Designed a computer from transistors in simulation</li>
+                            <li>Learned key concepts of how a CPU and its components function at a low level</li>
+                            <li>Became proficient in Assembly</li>
+                            <li>Learned how hardware design languages differ from traditional high level languages</li>
+                            <li>Designed a VM Translator, Compiler, Assembler, ALU, RAM, CPU</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Intro to AI/LISP</h3>
+                        <ul>
+                            <li>Learned graph searching algorithms such as Dijkstra's and A*</li>
+                        </ul>
+                    </div>
+
+                    <div class="document-item">
+                        <h3>Guided Research A</h3>
+                        <ul>
+                            <li>Learned cyber forensics fundamentals</li>
+                            <li>Learned OPSEC and OSINT fundamentals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Research Interests -->
+                <div class="document-section">
+                    <h2>Research Interests</h2>
+                    <p>
+                        Advancements in RISC-V, x86_64, firmware, cyber exploits/exploit development, networking
+                    </p>
+                </div>
+
+                <!-- Research Experience -->
+                <div class="document-section">
+                    <h2>Research Experience</h2>
+                    
+                    <div class="document-item">
+                        <h3>Research Intern</h3>
+                        <p class="document-meta">Dr. Tim Edwards, FOSSi Foundation</p>
+                        <ul>
+                            <li>Investigated cache configurations for a RISC-V processor on FPGA, optimized design to achieve 8x performance gain through architectural changes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Teaching and Mentoring Experience -->
+                <div class="document-section">
+                    <h2>Teaching and Mentoring Experience</h2>
+                    
+                    <div class="document-item">
+                        <h3>President, Game Development Team</h3>
+                        <p class="document-meta">Poolesville High School</p>
+                        <ul>
+                            <li>Prepared lectures and presentations about topics</li>
+                            <li>Organized meetings, fundraising events, and sponsors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="document-section">
+                    <h2>Technical Skills</h2>
+                    <p>
+                        <strong>Programming Languages:</strong> Assembly, Verilog, Rust, C, C++, Python, Java, Bash<br>
+                        <strong>CAD/CAE:</strong> OnShape, Fusion 360, EasyEDA<br>
+                        <strong>3D Printing:</strong> FDM, Resin, OrcaSlicer, AnycubicNext, Lychee Slicer<br>
+                        <strong>Linux Systems:</strong> Arch, Gentoo, Kali, Alpine<br>
+                        <strong>Server/Networking:</strong> Proxmox, Debian Linux, Docker, docker-compose, Tailscale, networking switches, routers, SBCs, NASs
+                    </p>
+                </div>
+
+                <!-- Languages -->
+                <div class="document-section">
+                    <h2>Languages</h2>
+                    <p>
+                        English: Fluent<br>
+                        Urdu: Proficient<br>
+                        Spanish: Proficient<br>
+                        Arabic: Learning
+                    </p>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="download-section">
+                <p style="margin-bottom: 1rem; color: var(--color-text-muted);">
+                    Download a PDF version of my resume
+                </p>
+                <a href="files/resume.pdf" class="download-btn" download>
+                    Download Resume PDF
+                </a>
+            </div>
+        </div>
     </main>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const themeText = document.querySelector('.theme-text');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeButton(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        });
+
+        function updateThemeButton(theme) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Light';
+            } else {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Dark';
+            }
+        }
+    </script>
 </body>
 </html>
