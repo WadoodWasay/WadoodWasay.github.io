@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Wadood Wasay</title>
+    <title>Projects - Wadood Wasay</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -16,8 +16,8 @@
             <ul class="nav-links">
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="cv.html">CV</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="https://github.com/wadoodwasay" target="_blank">GitHub</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://github.com/WadoodWasay" target="_blank">GitHub</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -30,38 +30,32 @@
     </nav>
 
     <main>
-        <div class="document-container">
+        <div class="container">
             <div class="document-header">
-                <h1>Resume</h1>
-                <p class="document-subtitle">Wadood Wasay</p>
+                <h1>Projects</h1>
+                <p class="document-subtitle">A collection of my academic and personal work.</p>
             </div>
 
-            <!-- Instructions for Google Docs Embed
-            <div class="embed-notice">
-                <strong>To embed your Google Doc:</strong><br>
-                1. Open your resume in Google Docs<br>
-                2. Click File → Share → Publish to web<br>
-                3. Choose "Embed" tab and copy the iframe code<br>
-                4. Replace the iframe src URL below with your document's embed URL<br>
-                5. Or uncomment the section below and paste your entire iframe code
-		</div> --!>
-
-            <!-- Google Docs Embed (Uncomment and add your embed URL) -->
-            <div class="document-embed">
-		<iframe src="https://docs.google.com/document/d/e/2PACX-1vTPvk7EbJxDmRl5aUa_8hhOjF__WfCw8-A8V5Mk2RR_LdwvIwo1Vu-uKeiw9kgdaEoYZNMRd-bNMqgs/pub?embedded=true"></iframe>
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Academic">Academic</button>
+                <button class="filter-btn" data-filter="Hobby">Hobby</button>
+                <select id="sort-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="az">A–Z</option>
+                </select>
             </div>
 
-            <!-- Download Section -->
-            <div class="download-section">
-                <p style="margin-bottom: 1rem; color: var(--color-text-muted);">
-                    Download a PDF version of my resume
-                </p>
-                <a href="files/resume.pdf" class="download-btn" download>
-                    Download Resume PDF
-                </a>
-            </div>
+            <div id="all-projects" class="projects-grid"></div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Wadood Wasay. All rights reserved.</p>
+    </footer>
+
+    <script src="js/projects-page.js"></script>
 
     <script>
         // Theme Toggle Functionality
@@ -77,7 +71,6 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeButton(newTheme);

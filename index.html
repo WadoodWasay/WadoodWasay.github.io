@@ -16,7 +16,7 @@
             <ul class="nav-links">
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="cv.html">CV</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="https://github.com/wadoodwasay" target="_blank">GitHub</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li>
@@ -29,120 +29,46 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Background Image -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
-        
+
         <div class="hero-content">
-            <!-- Profile Picture - Replace src with your image -->
-            <img src="images/profile.jpg" alt="Wadood Wasay" class="profile-picture" onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='flex';">
+            <img src="assets/images/profile.jpg" alt="Wadood Wasay" class="profile-picture"
+                 onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='flex';">
             <div id="profile-fallback" class="profile-placeholder" style="display: none;">WW</div>
-            
+
             <h1>Hello, I'm Wadood Wasay</h1>
             <p class="hero-subtitle">I'm a student of computer/electrical engineering, hardware enthusiast, and full-stack engineer. Explore my work below!</p>
         </div>
 
         <div class="scroll-indicator">
-            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 5v14M19 12l-7 7-7-7"/>
             </svg>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container" id="projects">
-            <h2 class="section-title">Projects</h2>
-            
-            <!-- Project Filter -->
-            <div class="project-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="academic">Academic</button>
-                <button class="filter-btn" data-filter="hobby">Hobby</button>
-            </div>
+    <!-- Featured Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
 
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <a href="project-template.html" class="project-card" data-category="academic">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="Project 1" class="project-image">
-                        <span class="project-category-badge">Academic</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title</h3>
-                        <p class="project-description">Brief description of this project. What technologies did you use? What problem did it solve?</p>
-                    </div>
-                </a>
+            <div id="featured-projects" class="projects-grid"></div>
 
-                <!-- Project 2 -->
-                <a href="project-template.html" class="project-card" data-category="hobby">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" alt="Project 2" class="project-image">
-                        <span class="project-category-badge">Hobby</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title</h3>
-                        <p class="project-description">Brief description of this project. What technologies did you use? What problem did it solve?</p>
-                    </div>
-                </a>
-
-                <!-- Project 3 -->
-                <a href="project-template.html" class="project-card" data-category="academic">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop" alt="Project 3" class="project-image">
-                        <span class="project-category-badge">Academic</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title</h3>
-                        <p class="project-description">Brief description of this project. What technologies did you use? What problem did it solve?</p>
-                    </div>
-                </a>
-
-                <!-- Project 4 -->
-                <a href="project-template.html" class="project-card" data-category="hobby">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop" alt="Project 4" class="project-image">
-                        <span class="project-category-badge">Hobby</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title</h3>
-                        <p class="project-description">Brief description of this project. What technologies did you use? What problem did it solve?</p>
-                    </div>
-                </a>
-
-                <!-- Project 5 -->
-                <a href="project-template.html" class="project-card" data-category="academic">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Project 5" class="project-image">
-                        <span class="project-category-badge">Academic</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title</h3>
-                        <p class="project-description">Brief description of this project. What technologies did you use? What problem did it solve?</p>
-                    </div>
-                </a>
-
-                <!-- Project 6 -->
-                <a href="project-template.html" class="project-card" data-category="hobby">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop" alt="Project 6" class="project-image">
-                        <span class="project-category-badge">Hobby</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Title</h3>
-                        <p class="project-description">Brief description of this project. What technologies did you use? What problem did it solve?</p>
-                    </div>
-                </a>
+            <div class="view-all-container">
+                <a href="projects.html" class="view-all-btn">View All Projects →</a>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer>
         <p>&copy; 2025 Wadood Wasay. All rights reserved.</p>
     </footer>
+
+    <script src="js/featured-projects.js"></script>
 
     <script>
         // Theme Toggle Functionality
@@ -151,7 +77,6 @@
         const themeText = document.querySelector('.theme-text');
         const html = document.documentElement;
 
-        // Check for saved theme preference or default to light mode
         const currentTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', currentTheme);
         updateThemeButton(currentTheme);
@@ -159,7 +84,6 @@
         themeToggle.addEventListener('click', () => {
             const current = html.getAttribute('data-theme');
             const newTheme = current === 'dark' ? 'light' : 'dark';
-            
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeButton(newTheme);
@@ -174,29 +98,6 @@
                 themeText.textContent = 'Dark';
             }
         }
-
-        // Project Filter Functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                // Filter projects
-                const filter = btn.dataset.filter;
-                
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.classList.remove('hidden');
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                });
-            });
-        });
     </script>
 </body>
 </html>

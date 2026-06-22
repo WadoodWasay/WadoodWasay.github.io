@@ -1,0 +1,22 @@
+[
+  {
+    "title": "RISC-V VexRISC core cache optimizations",
+    "description": "Testing why the performance of vexrisc suffered",
+    "image": "assets/images/projects/vexriscv.jpg",
+    "page": "projects/vxrisc-internship.html",
+    "date": "2025-06-15",
+    "category": "Academic",
+    "tags": ["Hardware", "Verilog"],
+    "featured": true
+  },
+  {
+    "title": "This website!",
+    "description": "The documentation for how this website came to be!",
+    "image": "assets/images/projects/this_website.jpg",
+    "page": "projects/this-website.html",
+    "date": "2026-06-21",
+    "category": "Hobby",
+    "tags": ["Website"],
+    "featured": true
+  }
+]
