@@ -10,6 +10,16 @@
     "featured": true
   },
   {
+    "title": "7x8 Charlieplexing Controller",
+    "description": "A 7x8 Charlieplexing controller written in Verilog and taped out on the TinyTapeout Sky26B shuttle",
+    "image": "assets/images/projects/charlieplex_smile.jpg",
+    "page": "projects/charlieplex-controller.html",
+    "date": "2026-05-14",
+    "category": "Academic",
+    "tags": ["Hardware", "Verilog", "TinyTapeout"],
+    "featured": true
+  },
+  {
     "title": "This website!",
     "description": "The documentation for how this website came to be!",
     "image": "assets/images/projects/this_website.jpg",
